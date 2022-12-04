@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Chaveamento Copa 2022</title>
+		<link rel="stylesheet" href="./css/style.css">
+		<base target="_blank"></base>
+		<meta name="title" content="Copa do mundo 2022">
+	</head>
+	<body>
+		<div id="app">
+			<!--<div id="top">
+				<div id="current" v-if="current !== undefined">
+					<span class="home center">
+						<flag size=3 :code="current.home_team.country"></flag><br>
+						{{current.home_team.name}}
+					</span>
+					<span class="score">
+						<span class="big">{{current.home_team.goals}}-{{current.away_team.goals}}<br></span><br>
+						<b v-if="current.time">{{current.time.replaceAll("full-time", "FT").replaceAll("90'", "FT")}}</b>
+						<b v-if="!current.time" class="red">FINAL</b>
+					</span>
+					<span class="away center">
+						<flag size=3 :code="current.away_team.country"></flag><br>
+						{{current.away_team.name}}
+					</span>
+					<br>
+					<label class="bold" v-if="currentgamenames.length>1"><br><br>showing match {{currentcount+1}}/{{currentgamenames.length}}: <select @input="poll()" v-model="currentcount"><option v-for="(name, n) in currentgamenames" :value="n">{{name}}</option></select></label>
+				</div>
+				<hr>
+			</div>-->
+			<div>
+				<div id="bracket" v-if="matches.length>0">
+					<br><br><br>
+					<div class="col left">
+						<match :match="matches[49-1]"></match>
+						<match :match="matches[50-1]"></match>
+						<match :match="matches[53-1]"></match>
+						<match :match="matches[54-1]"></match>
+					</div>
+					<div class="col left">
+						<match :match="matches[58-1]"></match>
+						<match :match="matches[57-1]"></match>
+					</div>
+					<div class="col left">
+						<match :match="matches[61-1]"></match>
+					</div>
+					<div class="col middle">
+						<match class="blank" :match="matches[63-1]"></match>
+						<match :match="matches[64-1]"></match>
+						<match :match="matches[63-1]"></match>
+					</div>
+					<div class="col right">
+						<match :match="matches[62-1]"></match>
+					</div>
+					<div class="col right">
+						<match :match="matches[60-1]"></match>
+						<match :match="matches[59-1]"></match>
+					</div>
+					<div class="col right">
+						<match :match="matches[51-1]"></match>
+						<match :match="matches[52-1]"></match>
+						<match :match="matches[55-1]"></match>
+						<match :match="matches[56-1]"></match>
+					</div>
+			</div></div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>
