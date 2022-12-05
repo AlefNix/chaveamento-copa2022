@@ -11,6 +11,7 @@ Vue.component('flag', {
 Vue.component('match', {
 	props: ['match'],
 	// template: "<span>{{match.id}}</span>",
+	//future:match.status.startsWith('future')
 	template: `
 <div :id="match.id"
 	class="group"
@@ -18,7 +19,7 @@ Vue.component('match', {
 	:class="{current:match.id==$root.current.id,final:match.id==64}">
 	<span><b>{{(match.id==64) ? "Final" : ((match.id==63) ? "Terceiro Lugar" : ((match.id==61 || match.id==62) ? "Semi-Final: Jogo " + match.id :((match.id==57 || match.id==58 || match.id==59 || match.id==60) ?"Quartas de final: Jogo " + match.id : "Oitavas: Jogo "+ match.id)))}}</b><br>{{this.$root.time(match.datetime, false, true)}}</span>
 	<br><br>
-<div :class="{future:match.status.startsWith('future')}">
+<div :class="{}">
 	<flag size=1 :code="matchCountry(match.home_team.country)"></flag>
 	<span class="home" :class="{bold:match.home_team.name==match.winner||match.winner=='Draw'}">{{matchName(match.home_team)}}</span><span class="away biggish">{{match.home_team.goals}}</span>
 	<br>
