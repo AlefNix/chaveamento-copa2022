@@ -1,3 +1,8 @@
+@font-face {
+	font-family: qatar;
+	src: url(../font/Qatar2022-Bold.otf);
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -5,7 +10,9 @@ body {
 	align-items: center;
 	font-family: monospace;
 	background-image: url('../assets/qatarbg.png');
+	background-attachment: scroll;
 	width: 100vw;
+	font-family: qatar;
 }
 
 
