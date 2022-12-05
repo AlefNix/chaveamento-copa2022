@@ -4,7 +4,7 @@ body {
 	overflow-x: hidden;
 	align-items: center;
 	font-family: monospace;
-	background: lightgrey;
+	background-image: url('../assets/qatarbg.png');
 	width: 100vw;
 }
 
@@ -97,16 +97,19 @@ summary h2 {display: inline;}
 }
 
 .group {
-	background: white;
+	backdrop-filter: blur(1px) saturate(150%) !important;
+    -webkit-backdrop-filter: blur(1px) !important;
+    background-color: rgba(0, 207, 45, 0.5) !important;
 	display: inline-block;
 	vertical-align: middle;
 	margin: 2px;
 	min-width: 180px;
-	/* flex: 0 0 100px; */
-	border: 1px solid lightgrey;
-	/* max-height: 25%; */
 	border-radius: 5px;
 	text-align:center;
+	-webkit-box-shadow: 0px 0px 50px -10px rgba(0,0,0,1);
+-moz-box-shadow: 0px 0px 50px -10px rgba(0,0,0,1);
+box-shadow: 0px 0px 50px -10px rgba(0,0,0,1);
+color: #ffffff;
 }
 .group.blank {
 visibility:hidden;
